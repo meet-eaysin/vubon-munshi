@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Loader2, BookOpen, Clock, Award, TrendingUp, Play } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Enrollment {
   id: string;
@@ -116,10 +117,11 @@ export default function DashboardPage() {
               <Card key={enrollment.id} className="overflow-hidden">
                 <div className="aspect-video relative">
                   {enrollment.course.thumbnail ? (
-                    <img
+                    <Image
                       src={enrollment.course.thumbnail}
                       alt={enrollment.course.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   ) : (
                     <div className="w-full h-full bg-muted flex items-center justify-center">
