@@ -1,0 +1,40 @@
+import { LucideProps } from "lucide-react"
+
+export const Rings = (props: LucideProps) => {
+  return (<svg {...props} width="493" height="493" viewBox="0 0 493 493" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_422_277)">
+      <path d="M246.5 491.631C381.882 491.631 491.631 381.882 491.631 246.5C491.631 111.118 381.882 1.36963 246.5 1.36963C111.118 1.36963 1.36963 111.118 1.36963 246.5C1.36963 381.882 111.118 491.631 246.5 491.631Z" stroke="#8B5CF6" stroke-opacity="0.08" />
+      <path d="M246.5 491.631C381.882 491.631 491.631 381.882 491.631 246.5C491.631 111.118 381.882 1.36963 246.5 1.36963C111.118 1.36963 1.36963 111.118 1.36963 246.5C1.36963 381.882 111.118 491.631 246.5 491.631Z" stroke="url(#paint0_linear_422_277)" stroke-opacity="0.32" />
+      <g filter="url(#filter0_f_422_277)">
+        <path d="M246.5 458.764C363.73 458.764 458.764 363.73 458.764 246.5C458.764 129.27 363.73 34.2363 246.5 34.2363C129.27 34.2363 34.2363 129.27 34.2363 246.5C34.2363 363.73 129.27 458.764 246.5 458.764Z" stroke="url(#paint1_linear_422_277)" stroke-opacity="0.6" />
+      </g>
+      <path d="M246.5 477.936C374.319 477.936 477.936 374.319 477.936 246.5C477.936 118.681 374.319 15.064 246.5 15.064C118.681 15.064 15.064 118.681 15.064 246.5C15.064 374.319 118.681 477.936 246.5 477.936Z" stroke="#8B5CF6" stroke-opacity="0.16" />
+      <path d="M246.5 477.936C374.319 477.936 477.936 374.319 477.936 246.5C477.936 118.681 374.319 15.064 246.5 15.064C118.681 15.064 15.064 118.681 15.064 246.5C15.064 374.319 118.681 477.936 246.5 477.936Z" stroke="url(#paint2_linear_422_277)" stroke-opacity="0.8" />
+    </g>
+    <defs>
+      <filter id="filter0_f_422_277" x="30.7363" y="30.7363" width="431.528" height="431.528" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur_422_277" />
+      </filter>
+      <linearGradient id="paint0_linear_422_277" x1="0.000138508" y1="246.495" x2="492.956" y2="241.882" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#8B5CF6" stop-opacity="0" />
+        <stop offset="0.515625" stop-color="#8B5CF6" />
+        <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient id="paint1_linear_422_277" x1="246.496" y1="32.8677" x2="250.497" y2="460.095" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#8B5CF6" stop-opacity="0" />
+        <stop offset="0.515625" stop-color="#8B5CF6" />
+        <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient id="paint2_linear_422_277" x1="476.567" y1="246.496" x2="16.4738" y2="250.807" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#8B5CF6" stop-opacity="0" />
+        <stop offset="0.515625" stop-color="#8B5CF6" />
+        <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+      </linearGradient>
+      <clipPath id="clip0_422_277">
+        <rect width="493" height="493" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>)
+}
