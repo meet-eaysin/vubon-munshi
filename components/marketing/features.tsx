@@ -1,7 +1,6 @@
 "use client";
 
 import { SectionBadge } from "@/components/marketing/section-bade";
-import Container from "../global/container";
 import Icons from "../global/icons";
 import MagicCard from "@/components/ui/magic-card";
 import { Ripple } from "@/components/ui/ripple";
@@ -17,7 +16,7 @@ import { Centeral } from "@/components/images/centeral";
 const Features = () => {
     return (
         <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
-            <Container>
+            <div>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Features" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
@@ -27,10 +26,10 @@ const Features = () => {
                         Transform your social media strategy with Luro AI&apos;s cutting-edge features, designed to optimize your content creation and engagement like never before.
                     </p>
                 </div>
-            </Container>
+            </div>
             <div className="mt-16 w-full">
                 <div className="flex flex-col items-center gap-5 lg:gap-5 w-full">
-                    <Container>
+                    <div>
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_.65fr] w-full gap-5 lg:gap-5">
                             <MagicCard particles={true} className="flex flex-col items-start size-full bg-primary/[0.08]">
                                 <div className="bento-card flex items-center justify-center min-h-72">
@@ -56,8 +55,8 @@ const Features = () => {
                                 </div>
                             </MagicCard>
                         </div>
-                    </Container>
-                    <Container>
+                    </div>
+                    <div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-5 lg:gap-5">
                             <MagicCard particles={true} className="flex flex-col items-start w-full row-span-1 bg-primary/[0.08]">
                                 <div className="bento-card w-full flex-row gap-6">
@@ -118,8 +117,8 @@ const Features = () => {
                                 </div>
                             </MagicCard>
                         </div>
-                    </Container>
-                    <Container>
+                    </div>
+                    <div>
                         <div className="grid grid-cols-1 lg:grid-cols-[.40fr_1fr] w-full gap-5 lg:gap-5">
                             <MagicCard particles={true} className="flex flex-col items-start w-full bg-primary/[0.08]">
                                 <div className="bento-card w-full flex-row gap-6">
@@ -152,7 +151,7 @@ const Features = () => {
                                 </div>
                             </MagicCard>
                         </div>
-                    </Container>
+                    </div>
                 </div>
             </div>
         </div>

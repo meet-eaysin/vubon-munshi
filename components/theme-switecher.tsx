@@ -45,7 +45,7 @@ export function ThemeSwitcher() {
     applyThemeToDOM(newTheme);
   };
 
-  const isDark = theme === "dark" || (theme === "system" && document.documentElement.classList.contains("dark"));
+  const isDark = theme === "dark" || (theme === "system" && typeof document !== 'undefined' && document.documentElement.classList.contains("dark"));
 
   return (
     <DropdownMenu>

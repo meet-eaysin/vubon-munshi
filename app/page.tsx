@@ -1,13 +1,13 @@
 import Wrapper from "@/components/global/wrapper";
 import CTA from "@/components/marketing/cta";
 import Features from "@/components/marketing/features";
-import Hero from "@/components/marketing/hero";
 import Bento from '@/components/marketing/bento'
 import Perks from "@/components/marketing/perks";
 import Reviews from "@/components/marketing/reviews";
 import { Spotlight } from "@/components/ui/spotlight";
 import Pricing from "@/components/marketing/price";
 import FAQ from "@/components/marketing/faq";
+import Hero from "@/components/marketing/hero";
 
 const HomePage = () => {
   return (
