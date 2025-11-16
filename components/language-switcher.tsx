@@ -8,8 +8,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Button } from "@/components/ui/button";
 
 const getLanguages = (isHydrated: boolean) => [
-  { code: "en", name: isHydrated ? "common.languages.english" : "English" },
-  { code: "zh", name: isHydrated ? "common.languages.chinese" : "中文" },
+  { code: "en", name: isHydrated ? "EN" : "EN" },
+  { code: "en", name: isHydrated ? "BN" : "BN" },
 ];
 
 export function LanguageSwitcher() {
@@ -34,7 +34,7 @@ export function LanguageSwitcher() {
             </span>
           ) : (
             <span>
-              {"common.languages.english"}
+              {"BN"}
             </span>
           )}
         </Button>

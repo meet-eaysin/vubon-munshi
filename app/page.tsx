@@ -1,6 +1,5 @@
 import Container from "@/components/global/container";
 import Wrapper from "@/components/global/wrapper";
-import Connect from "@/components/marketing/connect";
 import CTA from "@/components/marketing/cta";
 import Features from "@/components/marketing/features";
 import Hero from "@/components/marketing/hero";
@@ -18,7 +17,6 @@ const HomePage = () => {
         />
         <Hero />
       </Container>
-      <Connect />
       <Features />
       <Perks />
       {/* <Pricing /> */}

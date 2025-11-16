@@ -9,6 +9,8 @@ import { Button } from "../ui/button";
 import Menu from "./menu";
 import MobileMenu from "./mobile-menu";
 import { cn } from "@/lib/utils";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { ThemeSwitcher } from "@/components/theme-switecher";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -46,13 +48,13 @@ const Navbar = () => {
                                 <Menu />
                             </div>
                         </div>
-                        <div className="items-center flex gap-2 lg:gap-4">
+                        <div className="items-center flex gap-2">
 
-                            <Button size="sm" variant="tertiary" asChild className="hover:translate-y-0 hover:scale-100">
+                            {/* <Button size="sm" variant="tertiary" asChild className="hover:translate-y-0 hover:scale-100">
                                 <Link href="/auth/signin">
                                     Login
                                 </Link>
-                            </Button>
+                            </Button> */}
                             <Button size="sm" variant="white" asChild className="hidden sm:flex">
                                 <Link href="/auth/signup">
                                     Start for free
@@ -68,6 +70,8 @@ const Navbar = () => {
                             >
                                 {isOpen ? <XIcon className="w-4 h-4 duration-300" /> : <Icons.menu className="w-3.5 h-3.5 duration-300" />}
                             </Button>
+                            <ThemeSwitcher />
+                            <LanguageSwitcher />
                         </div>
                     </div>
                     <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
