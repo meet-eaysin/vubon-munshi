@@ -1,0 +1,97 @@
+
+import { ApiPlan, Plan } from '@/components/marketing/price/types'
+import { FireExtinguisher, User, Users } from 'lucide-react'
+import type { ReactNode } from 'react'
+
+export function transformApiPlanToPlan(
+  plan: ApiPlan,
+  isAuthenticated: boolean,
+  handleUpgradeSubscription: (planName: string, seats: number) => Promise<void>,
+  handleManageSubscription?: () => Promise<void>,
+  hasPaidSubscription?: boolean
+): Plan {
+  let icon: ReactNode = undefined
+  if (plan.group === 'team') {
+    icon = <User className='size-4' />
+  } else if (plan.group === 'enterprise') {
+    icon = <Users className='size-4' />
+  }
+
+  const isFree = plan.name.toLowerCase().includes('free')
+  const isPro = plan.name.toLowerCase().includes('pro')
+
+  const shouldShowManageButton = hasPaidSubscription && !isFree && handleManageSubscription
+
+  const ctaConfig = {
+    variant: !isPro ? 'glow' as const : 'default' as const,
+    label: shouldShowManageButton ? 'Manage Subscribe' : (isFree ? 'Start for Free' : 'Get Started'),
+  }
+
+  const basePlan = {
+    id: plan.id,
+    name: plan.name,
+    description: plan.description || '',
+    icon: icon,
+    monthlyPrice: plan.monthlyPrice || 0,
+    yearlyPrice: plan.yearlyPrice || 0,
+    seats: plan.seats || 1,
+    features: plan.features || [],
+    marketingFeatures: plan.marketingFeatures || [],
+    variant: (plan.variant as Plan['variant']) || 'default',
+    isEnterprise: plan.isEnterprise || false,
+    isCurrentPlan: plan.isCurrentPlan || false,
+  }
+
+  if (isAuthenticated) {
+    return {
+      ...basePlan,
+      cta: {
+        ...ctaConfig,
+        onClick: shouldShowManageButton
+          ? handleManageSubscription
+          : () => handleUpgradeSubscription(plan.name, plan.seats || 1)
+      }
+    }
+  }
+
+  return {
+    ...basePlan,
+    cta: {
+      ...ctaConfig,
+      href: isFree ? '/login' : '/login',
+    }
+  }
+}
+
+export function createEnterprisePlan(): Plan {
+  return {
+    id: 'enterprise',
+    name: 'Enterprise',
+    description: 'For custom requirements, dedicated support, SSO and data protection',
+    icon: <Users className='size-4' />,
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    seats: -1,
+    cta: {
+      variant: 'glow' as const,
+      label: 'Contact Us',
+      href: 'mailto:contact@libra.dev'
+    },
+    features: [
+      'All Premium features',
+      'Dedicated customer support',
+      'Custom integration solutions',
+      'Service Level Agreement (SLA)',
+      'Single Sign-On (SSO)',
+      'Advanced data protection options',
+    ],
+    marketingFeatures: [
+      'Dedicated deployment solutions',
+      'Compliance and audit support',
+      'Custom training and consulting services',
+      'Dedicated technical support',
+    ],
+    variant: 'enterprise',
+    isEnterprise: true,
+  }
+}
