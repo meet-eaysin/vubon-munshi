@@ -46,7 +46,7 @@ const mockPlans: Plan[] = [
     description: 'Advanced tools for professionals and small teams.',
     icon: <FireExtinguisher className="size-5" />,
     monthlyPrice: 29,
-    yearlyPrice: 290, // discounted yearly
+    yearlyPrice: 290,
     seats: 5,
     variant: 'glow',
     isEnterprise: false,
