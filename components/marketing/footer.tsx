@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
@@ -9,7 +8,7 @@ import { siteConfig } from "@/config/site";
 const Footer = () => {
     return (
         <footer className="w-full py-10 relative">
-            <Container>
+            <div>
                 <Wrapper className="relative flex flex-col md:flex-row justify-between pb-40 overflow-hidden footer">
                     <Particles
                         className="absolute inset-0 w-full -z-10"
@@ -53,8 +52,8 @@ const Footer = () => {
                         ))}
                     </div>
                 </Wrapper>
-            </Container>
-            <Container>
+            </div>
+            <div>
                 <Wrapper className="pt-10 flex items-center justify-between relative">
                     <p className="text-sm text-secondary-foreground">
                         &copy; {new Date().getFullYear()} Luro. All rights reserved.
@@ -71,7 +70,7 @@ const Footer = () => {
                         </Link>
                     </div>
                 </Wrapper>
-            </Container>
+            </div>
         </footer>
     )
 };

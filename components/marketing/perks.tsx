@@ -1,5 +1,4 @@
 import { LucideIcon } from "lucide-react";
-import Container from "../global/container";
 import { SectionBadge } from "@/components/marketing/section-bade";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -7,7 +6,7 @@ import { cn } from "@/lib/utils";
 const Perks = () => {
     return (
         <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
-            <Container>
+            <div>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <SectionBadge title="Perks" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
@@ -17,8 +16,8 @@ const Perks = () => {
                         Explore the powerful features and advantages that Luro offer to help you grow your social media presence
                     </p>
                 </div>
-            </Container>
-            <Container>
+            </div>
+            <div>
                 <div className="mt-16 w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full relative">
                         {siteConfig?.PERKS.map((perk, index) => (
@@ -26,7 +25,7 @@ const Perks = () => {
                         ))}
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     )
 };
