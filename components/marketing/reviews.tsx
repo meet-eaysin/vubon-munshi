@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { REVIEWS } from "@/config/reviews";
 import Marquee from "@/components/ui/marquee";
+import Container from "@/components/marketing/container";
 
 const firstRow = REVIEWS.slice(0, REVIEWS.length / 2);
 const secondRow = REVIEWS.slice(REVIEWS.length / 2);
@@ -9,7 +10,7 @@ const secondRow = REVIEWS.slice(REVIEWS.length / 2);
 const Reviews = () => {
     return (
         <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full">
-            <div>
+            <Container>
                 <div className="flex flex-col items-center text-center max-w-xl mx-auto">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
                         What our customers say
@@ -18,8 +19,8 @@ const Reviews = () => {
                         We are proud to have helped thousands of customers across the globe. Here are some of their stories
                     </p>
                 </div>
-            </div>
-            <div>
+            </Container>
+            <Container>
                 <div className="mt-16 w-full relative overflow-hidden">
                     <div className="relative flex flex-col items-center justify-center overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:30s]">
@@ -38,7 +39,7 @@ const Reviews = () => {
                         <div className="absolute hidden lg:block top-1/4 right-1/4 w-28 h-28 rounded-full bg-primary/80 -z-10 blur-[6rem]"></div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     )
 };

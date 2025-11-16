@@ -96,6 +96,17 @@ export const siteConfig = {
         "Easily integrate with your existing social media platforms and tools.",
     },
   ],
+  ctaSection: {
+    id: "cta",
+    title: "Ready to Master Your Money?",
+    subtitle: "Join thousands taking control of their finances",
+    backgroundImage: "/cta-background.png",
+    button: {
+      text: "Get Started",
+      href: "/waitlist",
+    },
+    subtext: "Free forever plan available • No credit card needed",
+  },
 };
 
 type SiteConfig = typeof siteConfig;

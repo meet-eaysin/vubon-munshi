@@ -19,12 +19,12 @@ const HomePage = () => {
         />
         <Hero />
       </div>
-      <Bento />
+      {/* <Bento /> */}
       {/* <Features /> */}
       <Perks />
       <Pricing />
       <Reviews />
-      <FAQ />
+      {/* <FAQ /> */}
       <CTA />
     </Wrapper>
   )

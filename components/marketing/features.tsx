@@ -18,7 +18,7 @@ const Features = () => {
         <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
             <div>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-                    <SectionBadge title="Features" />
+
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
                         Create content faster <br /> and smarter
                     </h2>
@@ -31,7 +31,7 @@ const Features = () => {
                 <div className="flex flex-col items-center gap-5 lg:gap-5 w-full">
                     <div>
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_.65fr] w-full gap-5 lg:gap-5">
-                            <MagicCard particles={true} className="flex flex-col items-start size-full bg-primary/[0.08]">
+                            <MagicCard particles={true} className="flex flex-col items-start size-full ">
                                 <div className="bento-card flex items-center justify-center min-h-72">
                                     <span className="text-muted-foreground group-hover:text-foreground mx-auto relative">
                                         <Icons.stars className="w-20 h-20" />

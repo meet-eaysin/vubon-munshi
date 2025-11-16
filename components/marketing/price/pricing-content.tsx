@@ -96,7 +96,7 @@ export function PricingContent({ title, description, yearlyDiscount, propPlans, 
 
   return (
     <>
-      {(title || description) && (
+      {/* {(title || description) && (
         <div className='flex flex-col items-center gap-4 text-center sm:gap-6 md:gap-8'>
           {title && (
             <h2 className='text-2xl leading-tight font-semibold text-balance sm:text-3xl md:text-4xl lg:text-5xl sm:leading-tight'>
@@ -109,9 +109,9 @@ export function PricingContent({ title, description, yearlyDiscount, propPlans, 
             </p>
           )}
         </div>
-      )}
+      )} */}
 
-      <div className='flex flex-col items-center gap-4'>
+      {/* <div className='flex flex-col items-center gap-4'>
         <div className='flex flex-wrap items-center justify-center gap-3 sm:gap-4'>
           <span className='text-sm'>Monthly</span>
           <Switch
@@ -126,11 +126,11 @@ export function PricingContent({ title, description, yearlyDiscount, propPlans, 
             </span>
           </span>
         </div>
-      </div>
+      </div> */}
 
       {(
         <>
-          <div className='max-w-container mx-auto grid w-full grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+          {/* <div className='max-w-container mx-auto grid w-full grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3'>
             {plans
               .filter((plan) => !plan.isEnterprise)
               .map((plan) => (
@@ -150,7 +150,7 @@ export function PricingContent({ title, description, yearlyDiscount, propPlans, 
                   isCurrentPlan={plan.isCurrentPlan}
                 />
               ))}
-          </div>
+          </div> */}
 
           {showEnterprise && (
             <div className='w-full mt-8 sm:mt-10 md:mt-12'>
