@@ -6,6 +6,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import Pricing from "@/components/marketing/price";
 import Hero from "@/components/marketing/hero";
 import FAQ from "@/components/marketing/faq";
+import Team from "@/components/marketing/team";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
       <Perks />
       <Pricing />
       <Reviews />
+      <Team />
       <FAQ />
       <CTA />
     </Wrapper>
