@@ -2,13 +2,14 @@
 import Image from "next/image";
 import { REVIEWS } from "@/config/reviews";
 import Marquee from "@/components/ui/marquee";
+import Container from "@/components/marketing/container";
 
 const firstRow = REVIEWS.slice(0, REVIEWS.length / 2);
 const secondRow = REVIEWS.slice(REVIEWS.length / 2);
 
 const Reviews = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full">
+        <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24  w-full overflow-hidden">
             <div>
                 <div className="flex flex-col items-center text-center max-w-xl mx-auto">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
@@ -19,7 +20,7 @@ const Reviews = () => {
                     </p>
                 </div>
             </div>
-            <div>
+            <div className="w-full h-full overflow-hidden">
                 <div className="mt-16 w-full relative overflow-hidden">
                     <div className="relative flex flex-col items-center justify-center overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:30s]">
