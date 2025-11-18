@@ -11,7 +11,7 @@ import Team from "@/components/marketing/team";
 const HomePage = () => {
   return (
     <Wrapper className="py-20 relative">
-      <div className="relative overflow-x-hidden">
+      <div className="relative">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="rgba(255, 255, 255, 0.5)"
